@@ -12,6 +12,11 @@ class RegistrationsController < ApplicationController
   		
   		@questions = params[:question]
 		@token = params[:token]
+		preparation(@questions.to_s)
+		open_file
+		@ans = search_word
+  		
+  		render json: {answer: @ans.to_s}
 		#puts @question
 		#preparation(@questions.to_s)
 		#open_file
@@ -24,10 +29,6 @@ class RegistrationsController < ApplicationController
 
   	def show
   		#@questions = "Буря %WORD% небо кроет, Вихри снежные крутя"
-  		preparation(@questions.to_s)
-		open_file
-		@ans = search_word
   		
-  		render json: {answer: @ans.to_s}
   	end
 end
