@@ -28,5 +28,8 @@ class RegistrationsController < ApplicationController
 		
   	end
 
+  	def show
+  		render json: {answer: @ans}
+  	end
   	
 end
