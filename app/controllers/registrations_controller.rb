@@ -16,7 +16,7 @@ class RegistrationsController < ApplicationController
 		preparation(@questions.to_s)
 		open_file
 		@ans = search_word
-  		
+  		render json: {answer: 'мглою'}
   		#render json: {answer: @ans.to_s}
 		#puts @question
 		#preparation(@questions.to_s)
@@ -29,7 +29,7 @@ class RegistrationsController < ApplicationController
   	end
 
   	def show
-  		render json: {answer: 'мглою'}
+  		
   	end
   	
 end
