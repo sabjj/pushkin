@@ -9,6 +9,7 @@ class RegistrationsController < ApplicationController
 		#puts 222222222222222222222222222
 		#params.delete(:authenticity_token)
   		#render plain: params.inspect
+  		#@questions = "%WORD% солнце знойное сушило,"
   		
   		@questions = params[:question]
 		@token = params[:token]
@@ -16,7 +17,7 @@ class RegistrationsController < ApplicationController
 		open_file
 		@ans = search_word
   		
-  		render json: {answer: @ans.to_s}
+  		render json: {answer: @ans}
 		#puts @question
 		#preparation(@questions.to_s)
 		#open_file
@@ -27,8 +28,5 @@ class RegistrationsController < ApplicationController
 		
   	end
 
-  	def show
-  		#@questions = "Буря %WORD% небо кроет, Вихри снежные крутя"
-  		
-  	end
+  	
 end
