@@ -17,7 +17,7 @@ class RegistrationsController < ApplicationController
 		open_file
 		@ans = search_word
   		
-  		#render json: {answer: @ans}
+  		render json: {answer: @ans}
 		#puts @question
 		#preparation(@questions.to_s)
 		#open_file
